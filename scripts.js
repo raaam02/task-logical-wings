@@ -25,9 +25,9 @@ $(document).ready(function () {
     const stateId = $(this).val();
     $.ajax({
       type: "method",
-      url: `fetchCity.php?countryId=${stateId}`,
+      url: `fetchCity.php?stateId=${stateId}`,
       success: function (response) {
-        $("#state").html(response);
+        $("#city").html(response);
       },
     });
   });
