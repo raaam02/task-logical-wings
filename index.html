@@ -16,12 +16,12 @@
         <h1 class="text-blue-500 text-center text-3xl font-semibold p-5">
           Sign up here
         </h1>
-        <form class="max-w-md mx-auto">
+        <form action="addUser.php" method="POST" class="max-w-md mx-auto">
           <div class="grid md:grid-cols-2 md:gap-6">
             <div class="relative z-0 w-full mb-5 group">
               <input
                 type="text"
-                name="floating_first_name"
+                name="fname"
                 id="floating_first_name"
                 class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
@@ -36,7 +36,7 @@
             <div class="relative z-0 w-full mb-5 group">
               <input
                 type="text"
-                name="floating_last_name"
+                name="lname"
                 id="floating_last_name"
                 class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
@@ -52,7 +52,7 @@
           <div class="relative z-0 w-full mb-5 group">
             <input
               type="email"
-              name="floating_email"
+              name="email"
               id="floating_email"
               class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
@@ -67,7 +67,7 @@
           <div class="relative z-0 w-full mb-5 group">
             <input
               type="tel"
-              name="floating_phone"
+              name="phone"
               id="floating_phone"
               class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
@@ -82,7 +82,7 @@
           <div class="relative z-0 w-full mb-5 group">
             <input
               type="text"
-              name="floating_add"
+              name="address"
               id="floating_add"
               class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
