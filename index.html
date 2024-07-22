@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Logical Wings</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body class="">
     <div
@@ -98,44 +100,9 @@
               id="country"
               name="country"
               required
-            >
-              <option
-                class="appearance-none text-sm text-gray-900 bg-gray-100/100"
-                value="India"
-              >
-                India
-              </option>
-              <option
-                class="appearance-none text-sm text-gray-900 bg-gray-100/100"
-                value="usa"
-              >
-                USA
-              </option>
-              COn
-            </select>
+            ></select>
           </div>
           <div class="grid md:grid-cols-2 md:gap-6">
-            <div class="relative z-0 w-full mb-5 group">
-              <select
-                class="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                id="country"
-                name="country"
-                required
-              >
-                <option
-                  class="appearance-none text-sm text-gray-900 bg-gray-100/100"
-                  value="India"
-                >
-                  India
-                </option>
-                <option
-                  class="appearance-none text-sm text-gray-900 bg-gray-100/100"
-                  value="usa"
-                >
-                  USA
-                </option>
-              </select>
-            </div>
             <div class="relative z-0 w-full mb-5 group">
               <select
                 class="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -145,15 +112,24 @@
               >
                 <option
                   class="appearance-none text-sm text-gray-900 bg-gray-100/100"
-                  value="mumbai"
+                  value=""
                 >
-                  Mumbai
+                  Select State
                 </option>
+              </select>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <select
+                class="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                id="city"
+                name="city"
+                required
+              >
                 <option
                   class="appearance-none text-sm text-gray-900 bg-gray-100/100"
-                  value="delhi"
+                  value=""
                 >
-                  Delhi
+                  Select City
                 </option>
               </select>
             </div>
@@ -167,5 +143,6 @@
         </form>
       </div>
     </div>
+    <script src="scripts.js"></script>
   </body>
 </html>
