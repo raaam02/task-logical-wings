@@ -31,4 +31,44 @@ $(document).ready(function () {
       },
     });
   });
+
+  //   Validation regex
+  const nameRegex = /^[a-zA-Z\s]+$/;
+  const phoneRegex = /^\d{10}$/;
+
+  //   firstname check
+  $("#first_name").on("keyup", function () {
+    let name = $(this).val();
+    if (!nameRegex.test(name)) {
+      $("#fnameError").fadeIn();
+      $(this).addClass("border-red-500");
+    } else {
+      $("#fnameError").fadeOut();
+      $(this).removeClass("border-red-500");
+    }
+  });
+
+  // lastname check
+  $("#last_name").on("keyup", function () {
+    let name = $(this).val();
+    if (!nameRegex.test(name)) {
+      $("#lnameError").fadeIn();
+      $(this).addClass("border-red-500");
+    } else {
+      $("#lnameError").fadeOut();
+      $(this).removeClass("border-red-500");
+    }
+  });
+
+  //   phone validation
+  $("#phone").on("change", function () {
+    let phone = $(this).val();
+    if (!phoneRegex.test(phone)) {
+      $("#phoneError").fadeIn();
+      $(this).addClass("border-red-500");
+    } else {
+      $("#phoneError").fadeOut();
+      $(this).removeClass("border-red-500");
+    }
+  });
 });
