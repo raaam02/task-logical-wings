@@ -71,4 +71,12 @@ $(document).ready(function () {
       $(this).removeClass("border-red-500");
     }
   });
+
+  //form error submision prevention
+  $("form").on("submit", function (e) {
+    if ($(".error").is(":visible")) {
+      e.preventDefault();
+      alert("You have some errors in form please resolve errors");
+    }
+  });
 });

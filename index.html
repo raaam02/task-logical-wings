@@ -16,7 +16,12 @@
         <h1 class="text-blue-500 text-center text-3xl font-semibold p-5">
           Sign up here
         </h1>
-        <form action="addUser.php" method="POST" class="max-w-md mx-auto">
+        <form
+          action="addUser.php"
+          method="POST"
+          class="max-w-md mx-auto"
+          id="regsiter"
+        >
           <div class="grid md:grid-cols-2 md:gap-6">
             <div class="relative z-0 w-full mb-5 group">
               <input
@@ -34,7 +39,7 @@
               >
               <span
                 id="fnameError"
-                class="text-red-500 text-xs"
+                class="error text-red-500 text-xs"
                 style="display: none"
                 >Name should contain only letters</span
               >
@@ -55,7 +60,7 @@
               >
               <span
                 id="lnameError"
-                class="text-red-500 text-xs"
+                class="error text-red-500 text-xs"
                 style="display: none"
                 >Name should contain only letters</span
               >
@@ -92,7 +97,7 @@
             >
             <span
               id="phoneError"
-              class="text-red-500 text-xs"
+              class="error text-red-500 text-xs"
               style="display: none"
               >Phone number should be 10 digits only</span
             >
