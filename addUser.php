@@ -14,15 +14,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt->bind_param("sssisi", $fname, $lname, $email, $phone, $address, $city);
 
-    $result = $stmt->execute();
 
-    if ($result) {
-        header("location: index.html");
-    } else {
-        echo "Error: " . $stmt->error;
+    try {
+        if ($stmt->execute()) {
+
+            header("Location: success.html");
+            $stmt->close();
+            $conn->close();
+            exit();
+        } else {
+
+            error_log("Error executing statement: " . print_r($stmt->error, true));
+            header("Location: error.html");
+            $stmt->close();
+            $conn->close();
+            exit();
+        }
+    } catch (Exception $e) {
+        error_log("Exception caught: " . $e->getMessage());
+        header("Location: error.html");
+        exit();
     }
-
-    $stmt->close();
-    $conn->close();
 
 }
